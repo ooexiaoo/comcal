@@ -1,6 +1,8 @@
 // DOM Elements
 const calculateBtn = document.getElementById('calculate-btn');
 const resultSection = document.getElementById('result-section');
+const historySection = document.getElementById('history-section');
+const historyList = document.getElementById('history-list');
 
 // Zodiac sign dates
 const zodiacDates = {

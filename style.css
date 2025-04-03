@@ -378,6 +378,76 @@ footer .tech {
     color: var(--primary-color);
 }
 
+/* DNA Visualization */
+.dna-visualization {
+    font-family: monospace;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    margin: 15px 0;
+    text-align: center;
+}
+
+.dna-match {
+    color: var(--success-color);
+    font-weight: bold;
+}
+
+.dna-mismatch {
+    color: var(--primary-color);
+    opacity: 0.6;
+}
+
+.personality-types {
+    text-align: center;
+    font-size: 1.1rem;
+    margin: 10px 0;
+}
+
+.personality-types span {
+    font-weight: bold;
+    color: var(--secondary-color);
+}
+
+/* History Section */
+.history-section {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+#history-list {
+    list-style-type: none;
+}
+
+#history-list li {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+
+#history-list li:last-child {
+    border-bottom: none;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-in;
+}
+
+@keyframes slideUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.slide-up {
+    animation: slideUp 0.5s ease-out;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .container {
