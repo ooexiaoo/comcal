@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantum Love Compatibility Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-heart"></i> Quantum Love Compatibility Calculator</h1>
+            <p class="subtitle">Harnessing celestial alignment and quantum entanglement to predict romantic success</p>
+        </header>
+
+        <div class="calculator-container">
+            <div class="input-section">
+                <h2>Personal Data Input</h2>
+                
+                <div class="person-section" id="person1">
+                    <h3>Person 1</h3>
+                    <div class="form-group">
+                        <label for="name1">Name:</label>
+                        <input type="text" id="name1" placeholder="Enter your name">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="age1">Age:</label>
+                        <input type="number" id="age1" min="18" max="120" placeholder="Your age">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="birthdate1">Birthdate (for zodiac):</label>
+                        <input type="date" id="birthdate1">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="zodiac1">Sun Sign:</label>
+                        <select id="zodiac1">
+                            <option value="">Select or use birthdate</option>
+                            <option value="aries">Aries ♈</option>
+                            <option value="taurus">Taurus ♉</option>
+                            <option value="gemini">Gemini ♊</option>
+                            <option value="cancer">Cancer ♋</option>
+                            <option value="leo">Leo ♌</option>
+                            <option value="virgo">Virgo ♍</option>
+                            <option value="libra">Libra ♎</option>
+                            <option value="scorpio">Scorpio ♏</option>
+                            <option value="sagittarius">Sagittarius ♐</option>
+                            <option value="capricorn">Capricorn ♑</option>
+                            <option value="aquarius">Aquarius ♒</option>
+                            <option value="pisces">Pisces ♓</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="movie1">Favorite Movie Genre:</label>
+                        <select id="movie1">
+                            <option value="romance">Romance</option>
+                            <option value="comedy">Comedy</option>
+                            <option value="action">Action</option>
+                            <option value="scifi">Sci-Fi</option>
+                            <option value="horror">Horror</option>
+                            <option value="drama">Drama</option>
+                            <option value="fantasy">Fantasy</option>
+                            <option value="documentary">Documentary</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="color1">Favorite Color:</label>
+                        <input type="color" id="color1" value="#ff0000">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Hobbies/Interests:</label>
+                        <div class="checkbox-group">
+                            <label><input type="checkbox" name="hobbies1" value="reading"> Reading</label>
+                            <label><input type="checkbox" name="hobbies1" value="sports"> Sports</label>
+                            <label><input type="checkbox" name="hobbies1" value="music"> Music</label>
+                            <label><input type="checkbox" name="hobbies1" value="travel"> Travel</label>
+                            <label><input type="checkbox" name="hobbies1" value="cooking"> Cooking</label>
+                            <label><input type="checkbox" name="hobbies1" value="gaming"> Gaming</label>
+                            <label><input type="checkbox" name="hobbies1" value="art"> Art</label>
+                            <label><input type="checkbox" name="hobbies1" value="dancing"> Dancing</label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Sleep Pattern:</label>
+                        <div class="radio-group">
+                            <label><input type="radio" name="sleep1" value="morning" checked> Morning Person</label>
+                            <label><input type="radio" name="sleep1" value="night"> Night Owl</label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="food1">Favorite Food:</label>
+                        <input type="text" id="food1" placeholder="Pizza, sushi, etc.">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="hrv1">Heart Rate Variability (simulated):</label>
+                        <input type="range" id="hrv1" min="0" max="100" value="50">
+                        <span id="hrvValue1">50</span> ms
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="dna1">Personality DNA Code (auto-generated):</label>
+                        <input type="text" id="dna1" readonly>
+                        <button class="small-btn" onclick="generateDNACode('dna1')">Generate</button>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="quirk1">One quirky fact about you:</label>
+                        <textarea id="quirk1" placeholder="I can wiggle my ears..."></textarea>
+                    </div>
+                </div>
+                
+                <div class="person-section" id="person2">
+                    <h3>Person 2</h3>
+                    <div class="form-group">
+                        <label for="name2">Name:</label>
+                        <input type="text" id="name2" placeholder="Enter your name">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="age2">Age:</label>
+                        <input type="number" id="age2" min="18" max="120" placeholder="Your age">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="birthdate2">Birthdate (for zodiac):</label>
+                        <input type="date" id="birthdate2">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="zodiac2">Sun Sign:</label>
+                        <select id="zodiac2">
+                            <option value="">Select or use birthdate</option>
+                            <option value="aries">Aries ♈</option>
+                            <option value="taurus">Taurus ♉</option>
+                            <option value="gemini">Gemini ♊</option>
+                            <option value="cancer">Cancer ♋</option>
+                            <option value="leo">Leo ♌</option>
+                            <option value="virgo">Virgo ♍</option>
+                            <option value="libra">Libra ♎</option>
+                            <option value="scorpio">Scorpio ♏</option>
+                            <option value="sagittarius">Sagittarius ♐</option>
+                            <option value="capricorn">Capricorn ♑</option>
+                            <option value="aquarius">Aquarius ♒</option>
+                            <option value="pisces">Pisces ♓</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="movie2">Favorite Movie Genre:</label>
+                        <select id="movie2">
+                            <option value="romance">Romance</option>
+                            <option value="comedy">Comedy</option>
+                            <option value="action">Action</option>
+                            <option value="scifi">Sci-Fi</option>
+                            <option value="horror">Horror</option>
+                            <option value="drama">Drama</option>
+                            <option value="fantasy">Fantasy</option>
+                            <option value="documentary">Documentary</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="color2">Favorite Color:</label>
+                        <input type="color" id="color2" value="#0000ff">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Hobbies/Interests:</label>
+                        <div class="checkbox-group">
+                            <label><input type="checkbox" name="hobbies2" value="reading"> Reading</label>
+                            <label><input type="checkbox" name="hobbies2" value="sports"> Sports</label>
+                            <label><input type="checkbox" name="hobbies2" value="music"> Music</label>
+                            <label><input type="checkbox" name="hobbies2" value="travel"> Travel</label>
+                            <label><input type="checkbox" name="hobbies2" value="cooking"> Cooking</label>
+                            <label><input type="checkbox" name="hobbies2" value="gaming"> Gaming</label>
+                            <label><input type="checkbox" name="hobbies2" value="art"> Art</label>
+                            <label><input type="checkbox" name="hobbies2" value="dancing"> Dancing</label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Sleep Pattern:</label>
+                        <div class="radio-group">
+                            <label><input type="radio" name="sleep2" value="morning" checked> Morning Person</label>
+                            <label><input type="radio" name="sleep2" value="night"> Night Owl</label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="food2">Favorite Food:</label>
+                        <input type="text" id="food2" placeholder="Pizza, sushi, etc.">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="hrv2">Heart Rate Variability (simulated):</label>
+                        <input type="range" id="hrv2" min="0" max="100" value="50">
+                        <span id="hrvValue2">50</span> ms
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="dna2">Personality DNA Code (auto-generated):</label>
+                        <input type="text" id="dna2" readonly>
+                        <button class="small-btn" onclick="generateDNACode('dna2')">Generate</button>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="quirk2">One quirky fact about you:</label>
+                        <textarea id="quirk2" placeholder="I collect rubber ducks..."></textarea>
+                    </div>
+                </div>
+                
+                <div class="calculate-btn-container">
+                    <button id="calculate-btn" onclick="calculateCompatibility()">
+                        <i class="fas fa-heartbeat"></i> Calculate Quantum Love Compatibility
+                    </button>
+                </div>
+            </div>
+            
+            <div class="result-section" id="result-section" style="display: none;">
+                <h2>Compatibility Analysis Results</h2>
+                
+                <div class="result-header">
+                    <div class="person-result">
+                        <div class="color-box" id="color-box1"></div>
+                        <h3 id="result-name1">Name 1</h3>
+                    </div>
+                    
+                    <div class="compatibility-score">
+                        <div class="score-circle">
+                            <span id="compatibility-percentage">0%</span>
+                        </div>
+                        <p>Quantum Compatibility Score</p>
+                    </div>
+                    
+                    <div class="person-result">
+                        <div class="color-box" id="color-box2"></div>
+                        <h3 id="result-name2">Name 2</h3>
+                    </div>
+                </div>
+                
+                <div class="result-details">
+                    <div class="result-grid">
+                        <div class="result-item">
+                            <h4>Celestial Alignment</h4>
+                            <div class="progress-bar">
+                                <div class="progress-fill" id="zodiac-progress"></div>
+                            </div>
+                            <p id="zodiac-text">Zodiac compatibility analysis</p>
+                        </div>
+                        
+                        <div class="result-item">
+                            <h4>Interest Harmony</h4>
+                            <div class="progress-bar">
+                                <div class="progress-fill" id="hobbies-progress"></div>
+                            </div>
+                            <p id="hobbies-text">Shared interests analysis</p>
+                        </div>
+                        
+                        <div class="result-item">
+                            <h4>Cultural Resonance</h4>
+                            <div class="progress-bar">
+                                <div class="progress-fill" id="movie-progress"></div>
+                            </div>
+                            <p id="movie-text">Movie preference alignment</p>
+                        </div>
+                        
+                        <div class="result-item">
+                            <h4>Chronological Synchronicity</h4>
+                            <div class="progress-bar">
+                                <div class="progress-fill" id="sleep-progress"></div>
+                            </div>
+                            <p id="sleep-text">Sleep pattern compatibility</p>
+                        </div>
+                        
+                        <div class="result-item">
+                            <h4>Gastronomic Affinity</h4>
+                            <div class="progress-bar">
+                                <div class="progress-fill" id="food-progress"></div>
+                            </div>
+                            <p id="food-text">Food preference match</p>
+                        </div>
+                        
+                        <div class="result-item">
+                            <h4>Biological Rhythm</h4>
+                            <div class="progress-bar">
+                                <div class="progress-fill" id="hrv-progress"></div>
+                            </div>
+                            <p id="hrv-text">Heart rate variability match</p>
+                        </div>
+                    </div>
+                    
+                    <div class="unique-factors">
+                        <h4>Unique Compatibility Factors</h4>
+                        <p id="quirk-analysis">Quirk analysis appears here</p>
+                    </div>
+                    
+                    <div class="dna-comparison">
+                        <h4>DNA Personality Profile Alignment</h4>
+                        <div class="dna-strings">
+                            <p id="dna-string1">ACGT...</p>
+                            <p id="dna-string2">TGCA...</p>
+                        </div>
+                        <div class="dna-match">
+                            <div class="dna-match-bar" id="dna-match-bar"></div>
+                            <p id="dna-match-text">Base pair match: 0%</p>
+                        </div>
+                    </div>
+                    
+                    <div class="final-analysis">
+                        <h4>Quantum Love Analysis</h4>
+                        <p id="final-analysis-text">Detailed analysis appears here...</p>
+                    </div>
+                </div>
+                
+                <div class="share-buttons">
+                    <button class="share-btn" onclick="shareResult('twitter')"><i class="fab fa-twitter"></i> Tweet</button>
+                    <button class="share-btn" onclick="shareResult('facebook')"><i class="fab fa-facebook"></i> Share</button>
+                    <button class="share-btn" onclick="shareResult('copy')"><i class="fas fa-copy"></i> Copy Link</button>
+                    <button class="share-btn" id="restart-btn" onclick="restartCalculator()"><i class="fas fa-redo"></i> Start Over</button>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>Disclaimer: This calculator is for entertainment purposes only. Love cannot be truly quantified by algorithms or celestial bodies.</p>
+            <p>© 2025 Quantum Love Labs | Powered by <span class="tech">Quantum Entanglement</span> and <span class="tech">Celestial Resonance</span></p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
