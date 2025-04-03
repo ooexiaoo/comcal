@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quantum Love Compatibility Calculator</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <div class="container">
@@ -335,10 +335,31 @@
                 </div>
                 
                 <div class="share-buttons">
-                    <button class="share-btn" onclick="shareResult('twitter')"><i class="fab fa-twitter"></i> Tweet</button>
-                    <button class="share-btn" onclick="shareResult('facebook')"><i class="fab fa-facebook"></i> Share</button>
-                    <button class="share-btn" onclick="shareResult('copy')"><i class="fas fa-copy"></i> Copy Link</button>
-                    <button class="share-btn" id="restart-btn" onclick="restartCalculator()"><i class="fas fa-redo"></i> Start Over</button>
+                    <!-- X/Twitter button with text fallback -->
+                    <button class="share-btn" onclick="shareResult('X')">
+                        <i class="fab fa-x-twitter"></i>
+                        <span class="social-text">Post</span>
+                    </button>
+                    
+                    <button class="share-btn" onclick="shareResult('facebook')">
+                        <i class="fab fa-facebook"></i>
+                        <span class="social-text">Facebook</span>
+                    </button>
+                    
+                    <button class="share-btn" onclick="shareResult('whatsapp')">
+                        <i class="fab fa-whatsapp"></i>
+                        <span class="social-text">WhatsApp</span>
+                    </button>
+                    
+                    <button class="share-btn" onclick="shareResult('copy')">
+                        <i class="fas fa-copy"></i>
+                        <span class="social-text">Copy Link</span>
+                    </button>
+                    
+                    <button class="share-btn" id="restart-btn" onclick="restartCalculator()">
+                        <i class="fas fa-redo"></i>
+                        <span class="social-text">Start Over</span>
+                    </button>
                 </div>
             </div>
         </div>
